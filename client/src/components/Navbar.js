@@ -41,6 +41,8 @@ const NavBar = () => {
         <Link to="/">Home</Link>
         <span style={{ marginRight: "10px" }}></span>
         {user && <Link to="/thingsDemo">Things</Link>}
+
+        {user && <Link to="/memes">Memes</Link>}
       </div>
       <div>{getRightNav()}</div>
     </div>
