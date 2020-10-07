@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     post "/memes/generate_chuck/:user_id", to: "memes#generate_chuck"
     post "/memes/generate_chuck_with_cu/", to: "memes#generate_chuck_cu"
 
+    put "/memes/:id", to: "memes#update"
+
     get "/memes", to: "memes#index"
   end
 end

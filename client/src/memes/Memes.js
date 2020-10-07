@@ -1,5 +1,6 @@
 import Axios from "axios";
 import React, { useEffect, useState } from "react";
+import Meme from "./Meme";
 import MemeUploader from "./MemeUploader";
 
 const Memes = (props) => {
@@ -12,14 +13,9 @@ const Memes = (props) => {
   return (
     <div>
       <h1>Memes</h1>
-      {memes.map((m) => {
-        return (
-          <div>
-            <img src={m.image_url} />
-            <p>{m.description}</p>
-          </div>
-        );
-      })}
+      {memes.map((m) => (
+        <Meme key={m.id} {...m} />
+      ))}
       <MemeUploader />
     </div>
   );
